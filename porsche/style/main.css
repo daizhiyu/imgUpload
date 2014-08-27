@@ -1,0 +1,496 @@
+@charset "utf-8";
+* {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+*::selection {
+    background: #00ccff;
+    color: #fff;
+}
+input, button, select, textarea {
+    outline: none;
+}
+textarea {
+    font-size: 13px;
+    resize: none;
+}
+.clear {
+    clear: both;
+}
+html{
+    -webkit-text-size-adjust:none;
+    font-family:Arial,"黑体",SimHei,"宋体",SimSun,sans-serif;
+}
+body {
+    background: #272c2f;
+    min-width: 320px;
+    width: 640px;
+    overflow-x: hidden;
+}
+.content {
+    width: 640px;
+    top: 0px;
+    left: 0px;
+    position: relative;
+}
+.content .screens{
+    width: 640px;
+    position: relative;
+    top: 0px;
+    left: 0px;
+}
+.content .wrap{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 1000;
+    background: rgba(255,255,255,0.93);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+.content .wrap .loading{
+    position: absolute;
+    top: 50%;
+    margin-top: -32px;
+    left: 50%;
+    margin-left: -64px;
+}
+.content .screenWelcome{
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    background: url(../images/alertBg.jpg) repeat;
+}
+.content .screenWelcome .welcomeTips{
+    font-size: 32px;
+    text-align: center;
+    width: 640px;
+    line-height: 36px;
+    position: absolute;
+    left: 0px;
+    top: 160px;
+    color:#fff;
+}
+.content .screenWelcome .startPick{
+    background: url(../images/but.png) center center no-repeat;
+    cursor: pointer;
+    width: 640px;
+    height: 302px;
+    position: absolute;
+    left: 0px;
+    top: 300px;
+}
+.content .screenOne{
+    height: 100%;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+.content .screenOne #picker{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 5;
+}
+.content .screenOne .pickerMenus{
+    width: 640px;
+    min-width: 320px;
+    height: 186px;
+    position:fixed;
+    bottom: 0px;
+    left: 0px;
+    z-index: 15;
+}
+.content .screenOne .pickerMenus .pickerMenuOne{
+    width: 100%;
+    height: 93px;
+    background: #cb2735 url(../images/picker.jpg) top center no-repeat;
+    cursor: pointer;
+}
+.content .screenOne .pickerMenus .pickerMenuTwo{
+    width: 100%;
+    height: 93px;
+    background: #44a4d9 url(../images/picker.jpg) bottom center no-repeat;
+    cursor: pointer;
+}
+.content .screenTwo{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+.content .screenTwo #sharePic{
+    width:640px;
+    height: 640px;
+}
+/***滤镜***/
+.content .screenTwo .filterPlace{
+    width: 640px;
+    height: 178px;
+    background: url(../images/directionBg.jpg) repeat;
+    position: relative;
+    display: none;
+}
+.content .screenTwo .filterPlace .direction{
+    width: 30px;
+    height: 178px;
+    position: absolute;
+    top: 0px;
+    background-image: url(../images/directionControll.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.content .screenTwo .filterPlace .direction.directionLeft{
+    background-position: left center;
+    left: 5px;
+    display:none;
+}
+.content .screenTwo .filterPlace .direction.directionRight{
+    right: 5px;
+    background-position: right center;
+}
+.content .screenTwo .filterPlace .fileterShower{
+    width: 532px;
+    height: 155px;
+    position: absolute;
+    top: 11px;
+    left: 56px;
+    overflow: hidden;
+}
+.content .screenTwo .filterPlace .fileterShower .filterTotal{
+    height:155px;
+    width: 2000px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.content .screenTwo .filterPlace .fileterShower .filterTotal .filters{
+    width: 158px;
+    height: 155px;
+    cursor: pointer;
+    float: left;
+    margin: 0 10px;
+}
+.content .screenTwo .filterPlace .fileterShower .filterTotal .filters#filter01{
+    background: url(../images/filter01.jpg) center center no-repeat;
+}
+.content .screenTwo .filterPlace .fileterShower .filterTotal .filters#filter02{
+    background: url(../images/filter02.jpg) center center no-repeat;
+}
+.content .screenTwo .filterPlace .fileterShower .filterTotal .filters#filter03{
+    background: url(../images/filter03.jpg) center center no-repeat;
+}
+.content .screenTwo .filterPlace .fileterShower .filterTotal .filters#filter04{
+    background: url(../images/filter05.jpg) center center no-repeat;
+}
+.content .screenTwo .filterPlace .fileterShower .filterTotal .filters#filter05{
+    background: url(../images/filter04.jpg) center center no-repeat;
+}
+/****边框***/
+.content .screenTwo .iframePlace{
+    width: 640px;
+    height: 178px;
+    background: url(../images/directionBg.jpg) repeat;
+    position: relative;
+}
+.content .screenTwo .iframePlace .direction{
+    width: 30px;
+    height: 178px;
+    position: absolute;
+    top: 0px;
+    background-image: url(../images/directionControll.png);
+    background-repeat: no-repeat;
+    cursor: pointer;
+}
+.content .screenTwo .iframePlace .direction.directionLeft{
+    background-position: left center;
+    left: 5px;
+    display:none;
+}
+.content .screenTwo .iframePlace .direction.directionRight{
+    right: 5px;
+    background-position: right center;
+}
+.content .screenTwo .iframePlace .iframeShower{
+    width: 532px;
+    height: 155px;
+    position: absolute;
+    top: 11px;
+    left: 56px;
+    overflow: hidden;
+}
+.content .screenTwo .iframePlace .iframeShower .iframeTotal{
+    height:155px;
+    width: 2000px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+.content .screenTwo .iframePlace .iframeShower .iframeTotal .iframers{
+    width: 158px;
+    height: 155px;
+    cursor: pointer;
+    float: left;
+    margin: 0 10px;
+}
+.content .screenTwo .iframePlace .iframeShower .iframeTotal .iframers#iframe01{
+    background: url(../images/iframeThreeLittle.jpg) center center no-repeat;
+}
+.content .screenTwo .iframePlace .iframeShower .iframeTotal .iframers#iframe02{
+    background: url(../images/iframeTwoLittle.jpg) center center no-repeat;
+}
+.content .screenTwo .iframePlace .iframeShower .iframeTotal .iframers#iframe03{
+    background: url(../images/iframeFiveLittle.jpg) center center no-repeat;
+}
+.content .screenTwo .iframePlace .iframeShower .iframeTotal .iframers#iframe04{
+    background: url(../images/iframeSixLittle.jpg) center center no-repeat;
+}
+.content .screenTwo .iframePlace .iframeShower .iframeTotal .iframers#iframe05{
+    background: url(../images/iframeFourLittle.jpg) center center no-repeat;
+}
+/***编辑按钮***/
+.content .screenTwo .editMenus{
+    width: 640px;
+    min-width: 320px;
+    height: 136px;
+    z-index: 15;
+}
+.content .screenTwo .editMenus.one{
+    position: relative;
+}
+.content .screenTwo .editMenus.two {
+    position: fixed;
+    left: 0px;
+    bottom: 0px;
+}
+.content .screenTwo .editMenus.one .editMenuOne{
+    width: 320px;
+    height: 68px;
+    background: #0d2c58;
+    cursor:pointer;
+    text-align: center;
+    line-height: 68px;
+    color: #fff;
+    font-size: 36px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+}
+
+.content .screenTwo .editMenus.one .editMenuTwo{
+    width: 320px;
+    height: 68px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 68px;
+    color: #fff;
+    font-size: 36px;
+    background: #cd2635;
+    position: absolute;
+    top: 0px;
+    right: 0px;
+
+}
+.content .screenTwo .editMenus.one .editMenuThree{
+    width: 100%;
+    height: 68px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 68px;
+    color: #fff;
+    font-size: 36px;
+    background: #44a5d7;
+    position: absolute;
+    bottom: 0px;
+    left: 0px;
+}
+.content .screenTwo .editMenus.two .editMenuOne{
+    width: 320px;
+    height: 68px;
+    background: #0d2c58;
+    cursor:pointer;
+    text-align: center;
+    line-height: 68px;
+    color: #fff;
+    font-size: 36px;
+    float: left;
+}
+
+.content .screenTwo .editMenus.two .editMenuTwo{
+    width: 320px;
+    height: 68px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 68px;
+    color: #fff;
+    font-size: 36px;
+    background: #cd2635;
+    float: left;
+
+}
+.content .screenTwo .editMenus.two .editMenuThree{
+    width: 640px;
+    height: 68px;
+    cursor: pointer;
+    text-align: center;
+    line-height: 68px;
+    color: #fff;
+    font-size: 36px;
+    background: #44a5d7;
+    clear: both;
+}
+/***分享界面***/
+.content .screenFour{
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+    background: #000;
+}
+.content .screenFour .friendTips{
+    width:520px;
+    position: relative;
+    margin: 16px auto;
+    height: 107px;
+    background: url(../images/friendTips.png) bottom right no-repeat;
+}
+.content .screenFour .shareTips{
+    width:520px;
+    position: relative;
+    margin: 40px auto;
+    height: 60px;
+    line-height: 60px;
+    color: #fff;
+    font-size: 40px;
+    text-align: center;
+}
+ .content .screenFour .finalPic{
+     position: relative;
+     margin: 0 auto;
+     display: block;
+ }
+.content .screenFour .saveImgTips{
+    width:520px;
+    position: relative;
+    margin: 40px auto;
+    height: 24px;
+    text-align: center;
+    line-height: 24px;
+    color: #333;
+    font-size: 22px;
+}
+.footer_block {
+    width: 100%;
+    display: block;
+    background: url(../img/design/bg-tech-data.png) repeat;
+    color: white;
+    text-decoration: none;
+    text-align: center;
+    line-height: 95px;
+    font-size: 1.5em;
+    padding: 20px 0 20px 0;
+    border-top: 1px solid #363839;
+    height: 56px;
+}
+.share_buttons{width:225px;margin:0 auto; list-style: none}
+.share_buttons li{float:left;margin:0 10px 0 10px;}
+.share_buttons li a{width:55px;height:55px;display:block;background-size:cover;}
+.sharejs_tsina{background:url(../img/design/share-weibo2.png) no-repeat;}
+.sharejs_tqq{background:url(../img/design/share-tencent.png) no-repeat;}
+.sharejs_douban{background:url(../img/design/share-doban.png) no-repeat;}
+
+.content .screenFour .shareMenus{
+    width: 640px;
+    min-width: 320px;
+    height: 51px;
+    z-index: 15;
+}
+.content .screenFour .shareMenus .shareMenuOne{
+    width: 100%;
+    height: 80px;
+    background: #63a4d5;
+    cursor: pointer;
+    line-height:80px;
+    font-size: 30px;
+    text-align: center;
+    color:#ffffff;
+}
+.content .screenFour .shareMenus .shareMenuTwo{
+    width: 100%;
+    height: 80px;
+    background: #0c3258;
+    cursor: pointer;
+    line-height:80px;
+    font-size: 30px;
+    text-align: center;
+    color:#ffffff;
+}
+.content .screenFour .shareMenus .shareMenuThree{
+    width: 100%;
+    height: 80px;
+    background: #63a4d5;
+    cursor: pointer;
+    line-height:80px;
+    font-size: 30px;
+    text-align: center;
+    color:#ffffff;
+}
+.content .screenFour .shareMenus .shareMenuFour{
+    width: 100%;
+    height: 80px;
+    background: #b62c33;
+    cursor: pointer;
+    line-height:80px;
+    font-size: 30px;
+    text-align: center;
+    color:#ffffff;
+}
+.content .screenFour .rules{
+    width:640px;
+    height: 1070px;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 1000;
+    background: url(../images/alertBg.jpg) top left repeat-y;
+    display: none;
+}
+.content .screenFour .rules .txt{
+    width: 640px;
+    position: absolute;
+    top: 440px;
+    left: 0px;
+    text-align: center;
+    color: #fff;
+    font-size: 26px;
+    line-height: 60px;
+}
+.content .screenFour .rules .closeRules{
+    background: url(../images/close.png) top right no-repeat;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 101;
+}
+.content .screenFour .rules .clickToCloseRules{
+    width: 640px;
+    height: 92px;
+    line-height: 92px;
+    text-align: center;
+    font-size: 36px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 102;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    background-color: #d52730;
+}

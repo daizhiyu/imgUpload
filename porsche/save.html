@@ -1,0 +1,291 @@
+<!DOCTYPE html PUBLIC "-//W3C//DTD XHTML 1.0 Transitional//EN" "http://www.w3.org/TR/xhtml1/DTD/xhtml1-transitional.dtd">
+<html xmlns="http://www.w3.org/1999/xhtml" xmlns="http://www.w3.org/1999/html">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport" content="width=640,target-densitydpi=device-dpi,user-scalable=no" />
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="HandheldFriendly" content="true"/>
+    <meta name="MobileOptimized" content="640"/>
+    <meta name="renderer" content="webkit|ie-comp|ie-stand">
+    <!--  双核浏览器默认用极速核(webkit)  -->
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <!--避免IE使用兼容模式-->
+    <meta name="screen-orientation" content="portrait">
+    <!--  UC强制竖屏  -->
+    <meta name="x5-orientation" content="portrait"/>
+    <meta name="format-detection" content="telephone=no"/>
+    <meta name="apple-mobile-web-app-capable" content="yes"/>
+    <meta name="msapplication-tap-highlight" content="no"/>
+    <title>与Porsche保持联系</title>
+    <script>
+        (function(i,s,o,g,r,a,m){i['GoogleAnalyticsObject']=r;i[r]=i[r]||function(){
+            (i[r].q=i[r].q||[]).push(arguments)},i[r].l=1*new Date();a=s.createElement(o),
+                m=s.getElementsByTagName(o)[0];a.async=1;a.src=g;m.parentNode.insertBefore(a,m)
+        })(window,document,'script','//www.google-analytics.com/analytics.js','ga');
+
+        ga('create', 'UA-40136895-29', 'auto');
+        ga('send', 'pageview');
+
+    </script>
+    <link type="text/css" rel="stylesheet" href="style/jquery.selectBoxIt.css" />
+    <link type="text/css" rel="stylesheet" href="style/save.css" />
+    <script type="text/javascript" src="script/jquery.min.js"></script>
+    <script type="text/javascript" src="script/jquery.cookie.js"></script>
+    <script type="text/javascript" src="script/jquery-ui.min.js"></script>
+    <script type="text/javascript" src="script/jquery.selectBoxIt.min.js"></script>
+    <script type="text/javascript" src="script/gyp.js"></script>
+</head>
+<body>
+<div class="content">
+    <div class="inputTitle">留下您的个人信息</div>
+    <div class="inputRole" id="inputName">
+        <div class="inputTips inputNameTips">姓名</div>
+        <input type="text" id="name" />
+        <div class="gender" id="man">先生</div>
+        <div class="gender" id="woman">女士</div>
+    </div>
+    <div class="inputRole" id="inputPhone">
+        <div class="inputTips inputPhoneTips">手机</div>
+        <input type="text" id="phone" maxlength="11" />
+    </div>
+    <div class="inputRole" id="inputCarModel">
+        <div class="inputTips inputCarModelTips">车型</div>
+        <select id="carModelChoice">
+            <option>选择你感兴趣的车型</option>
+            <option>Boxster</option>
+            <option>Cayman</option>
+            <option>911</option>
+            <option>918 Spyder</option>
+            <option>Panamera</option>
+            <option>Macan</option>
+            <option>Cayenne</option>
+        </select>
+    </div>
+    <div class="inputRole" id="inputCarTime">
+        <div class="inputTips inputCarTimeTips">预计购车时间</div>
+        <select id="carTimeChoice">
+            <option>3个月内</option>
+            <option>3~6个月</option>
+            <option>6~12个月</option>
+            <option>12个月以上</option>
+        </select>
+    </div>
+    <div class="inputRole" id="inputCarPrice">
+        <div class="inputTips inputCarPriceTips">购车预算</div>
+        <select id="carPriceChoice">
+            <option>50万以内</option>
+            <option>50~100万</option>
+            <option>100~150万</option>
+            <option>150~200万</option>
+            <option>200万以上</option>
+        </select>
+    </div>
+    <div class="inputRole" id="inputAgree">
+        <div class="inputTips inputAgreeTips">是否希望经销商联系</div>
+        <div class="YesOrNo yes" id="agree">是</div>
+        <div class="YesOrNo" id="notAgree">否</div>
+    </div>
+    <div class="inputRole" id="inputCarCenter">
+        <div class="inputTips inputCarCenterTips">经销商</div>
+        <select id="carCenterChoice">
+            <option>请选择哪个经销商与您联系</option>
+            <option>北京长安保时捷中心</option>
+            <option>上海浦西保时捷中心</option>
+            <option>北京亦庄保时捷中心</option>
+            <option>成都金牛保时捷中心</option>
+            <option>广州保时捷中心</option>
+            <option>杭州西湖保时捷中心</option>
+            <option>厦门鹭江保时捷中心</option>
+            <option>青岛保时捷中心</option>
+            <option>武汉盘龙保时捷中心</option>
+            <option>沈阳铁西保时捷中心</option>
+            <option>大连机场保时捷中心</option>
+            <option>重庆鹅岭保时捷中心</option>
+            <option>温州鹿城保时捷中心</option>
+            <option>天津空港保时捷中心</option>
+            <option>西安高新保时捷中心</option>
+            <option>南京宁南保时捷中心</option>
+            <option>昆明滇池保时捷中心</option>
+            <option>哈尔滨南岗保时捷中心</option>
+            <option>深圳福田保时捷中心</option>
+            <option>宁波海景保时捷中心</option>
+            <option>福州闽江保时捷中心</option>
+            <option>长沙星沙保时捷中心</option>
+            <option>北京海淀保时捷中心</option>
+            <option>金华保时捷中心</option>
+            <option>温州瓯海保时捷中心</option>
+            <option>郑州郑东保时捷中心</option>
+            <option>东莞寮步保时捷中心</option>
+            <option>上海浦东保时捷中心 </option>
+            <option>厦门翔安保时捷中心</option>
+            <option>成都机场保时捷中心</option>
+            <option>太原保时捷中心</option>
+            <option>海口保时捷中心</option>
+            <option>台州保时捷中心</option>
+            <option>苏州保时捷中心</option>
+            <option>杭州滨江保时捷中心</option>
+            <option>南宁保时捷中心</option>
+            <option>长春保时捷中心</option>
+            <option>武汉光谷保时捷中心</option>
+            <option>鄂尔多斯保时捷中心</option>
+            <option>合肥保时捷中心</option>
+            <option>兰州保时捷中心</option>
+            <option>北京金港保时捷中心</option>
+            <option>唐山保时捷中心</option>
+            <option>济南保时捷中心</option>
+            <option>呼和浩特保时捷中心</option>
+            <option>重庆人和保时捷中心</option>
+            <option>无锡保时捷中心</option>
+            <option>南通保时捷中心</option>
+            <option>南京河西保时捷中心</option>
+            <option>佛山南海保时捷中心</option>
+            <option>泉州保时捷中心</option>
+            <option>绍兴保时捷中心</option>
+            <option>南昌保时捷中心</option>
+            <option>北京石景山保时捷中心</option>
+            <option>常州保时捷中心</option>
+            <option>上海闵行保时捷中心</option>
+            <option>烟台保时捷中心</option>
+            <option>潍坊保时捷中心</option>
+            <option>三亚保时捷中心</option>
+            <option>宁波兴宁保时捷中心</option>
+            <option>哈尔滨松北保时捷中心</option>
+            <option>银川保时捷中心</option>
+            <option>西安丰庆保时捷中心</option>
+            <option>成都锦江保时捷中心</option>
+            <option>嘉兴保时捷中心</option>
+            <option>榆林保时捷中心</option>
+        </select>
+    </div>
+    <div class="inputRole" id="inputReader">
+        <div class="agreeOrNot yes" id="hasRead">我已经阅读</div>
+        <div class="showRules">隐私条款</div>
+    </div>
+    <div class="inputControll two" id="inputSure"></div>
+    <a href="index.php" onclick="ga('send','event','porsche','save', 'Form-Share-BackToCar');"> <div class="inputControll" id="inputBack"></div></a>
+    <div class="rules">
+        <div class="closeRules"></div>
+        <div class="clickToCloseRules">确定</div>
+    </div>
+    <div class="wrap">
+        <img class="loading" src="images/loading.GIF" width="128" />
+    </div>
+</div>
+<script type="text/javascript">
+    var timer;
+    var isShared = "no";
+    var sharedImg="";
+    $(document).ready(function(){
+        $.removeCookie("form",{path: '/test', domain: 'cd2014.porsche-events.cn'});
+        $.removeCookie("sharedImg",{path: '/test', domain: 'cd2014.porsche-events.cn'});
+        $("select").selectBoxIt({
+            defaultIcon:".selectDownBG",
+            width:"300px"
+        });
+        if(GYP.QueryString("img")){
+            isShared = "yes";
+            sharedImg = GYP.QueryString("img");
+        }else{
+            isShared = "no";
+        }
+        $(document).on("click",".content .inputControll#inputSure",saveInfo)
+        //关闭条款
+        $(document).on("click",".content .rules .clickToCloseRules,.content .rules .closeRules",function(){
+            $(".content .rules").hide();
+        });
+        //显示条款
+        $(document).on("click",".content .inputRole#inputReader .showRules",function(){
+            $("html, body").animate({scrollTop: "0px"},100);
+            $(".content .rules").show();
+        });
+        //同意条款
+        $(document).on("click",".content .inputRole#inputReader .agreeOrNot",function(){
+            $(this).toggleClass("yes");
+        });
+        //先生女士
+        $(document).on("click",".content .inputRole#inputName .gender#man",function(){
+            $(this).addClass("yes");
+            $(".content .inputRole#inputName .gender#woman").removeClass("yes");
+        });
+        $(document).on("click",".content .inputRole#inputName .gender#woman",function(){
+            $(this).addClass("yes");
+            $(".content .inputRole#inputName .gender#man").removeClass("yes");
+        });
+        //同意联系
+        $(document).on("click",".content .inputRole#inputAgree .YesOrNo",function(){
+            $(this).toggleClass("yes").siblings(".YesOrNo").toggleClass("yes");
+            if($(".content .inputRole#inputAgree .YesOrNo#agree").hasClass("yes")){
+                $(".content .inputRole#inputCarCenter").show();
+            }else{
+                $(".content .inputRole#inputCarCenter").hide();
+            }
+        });
+    });
+    function saveInfo(){
+        var hasRead = $(".content .inputRole#inputReader .agreeOrNot").hasClass("yes")?"yes":"no";
+        var YesOrNo = $(".content .inputRole#inputAgree .YesOrNo#agree").hasClass("yes")?"yes":"no";
+        var name = $(".content .inputRole#inputName #name").val();
+        var phone = $(".content .inputRole#inputPhone #phone").val();
+        var carModel = $(".content .inputRole#inputCarModel #carModelChoice").val();
+        var carCenter = $(".content .inputRole#inputCarCenter #carCenterChoice").val();
+        var buyTime = $(".content .inputRole#inputCarTime #carTimeChoice").val();
+        var gender = $(".content .inputRole#inputName .gender#man").hasClass("yes")?"man":"woman";
+        var price = $(".content .inputRole#inputCarPrice #carPriceChoice").val();
+        if(hasRead=="no"){
+            alert("只有同意条款才能参与预约");
+            return false;
+        }
+        if(name.length<2){
+            alert("请输入正确的姓名");
+            $(".content .inputRole#inputName #name").focus();
+            return false;
+        }
+        if((!$(".content .inputRole#inputName .gender#man").hasClass("yes"))&&(!$(".content .inputRole#inputName .gender#woman").hasClass("yes"))){
+            alert("请选择称呼");
+            return false;
+        }
+        if(!GYP.checkPhone(phone)){
+            alert("请输入正确的手机号码");
+            $(".content .inputRole#inputPhone #phone").focus();
+            return false;
+        }
+        if(carModel=="选择你感兴趣的车型"){
+            alert("请选择你感兴趣的车型");
+            return false;
+        }
+        if(carCenter=="请选择哪个经销商与您联系"&&YesOrNo=="yes"){
+            alert("请选择哪个经销商与您联系");
+            return false;
+        }
+        if(YesOrNo=="no"){
+            carCenter="";
+        }
+        ga('send','event','porsche','save', 'Martini-Upload');
+        WID = $(".content").width();
+        HEI = $("content").height();
+        $(".content .wrap").css({"line-height":HEI+"px","height":HEI,"width":WID}).show();
+        $.ajax({
+            url:"./wb/index.php",
+            data:{"name":name,"phone":phone,"carModel":carModel,"carCenter":carCenter,"isShared":isShared,"sharedImg":sharedImg,"YesOrNo":YesOrNo,"buyTime":buyTime,"gender":gender,"price":price},
+            dataType:"json",
+            type:"post",
+            success:function(data){
+                $(".content .wrap").hide();
+                if(parseInt(data.code)==1){
+                    if($(".content .inputRole#inputAgree .YesOrNo#agree").hasClass("yes")){
+                        alert("感谢您提交信息");
+                    }else{
+                        alert("感谢您的参与");
+                    }
+                    window.location.href = "index.php";
+
+                }else{
+                    alert("提交失败，请检查表单后重试.");
+                }
+
+            }
+        })
+    }
+</script>
+</body>
+</html>

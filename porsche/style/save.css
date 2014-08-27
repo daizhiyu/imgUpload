@@ -1,0 +1,310 @@
+@charset "utf-8";
+* {
+    padding: 0px;
+    margin: 0px;
+    border: none;
+}
+*::selection {
+    background: #00ccff;
+    color: #fff;
+}
+input, button, select, textarea {
+    outline: none;
+}
+textarea {
+    font-size: 13px;
+    resize: none;
+}
+.clear {
+    clear: both;
+}
+html{
+     -webkit-text-size-adjust:none;
+ }
+body {
+    background: #272c2f;
+    min-width: 320px;
+    width: 640px;
+    overflow-x: hidden;
+	font-family:Arial,"黑体",SimHei,"宋体",SimSun,sans-serif;
+}
+.content {
+    width: 640px;
+    top: 0px;
+    left: 0px;
+    position: relative;
+}
+.content .inputTitle{
+    width:640px;
+    height: 210px;
+    line-height: 210px;
+    text-align: center;
+    color: #fff;
+    font-size: 36px;
+    background: #000;
+}
+.content .inputRole{
+    width: 640px;
+    position: relative;
+    background-color: #000;
+    background-image: url(../images/inputBg.jpg);
+    background-repeat: repeat-x;
+    border-top:1px solid #222;
+}
+.content .inputRole .inputTips{
+    width: 140px;
+    height: 122px;
+    text-align: left;
+    text-indent: 20px;
+    line-height: 122px;
+    font-size: 30px;
+    color: #fff;
+}
+.content .inputRole .inputTips.inputNameTips{
+    color: #63a4d5;
+}
+.content .inputRole .inputTips.inputPhoneTips{
+    color: #b62c33;
+}
+.content .inputRole .inputTips.inputCarModelTips{
+    color: #63a4d5;
+}
+.content .inputRole .inputTips.inputCarTimeTips{
+    color: #b62c33;
+    width:200px;
+}
+.content .inputRole .inputTips.inputCarPriceTips{
+    color: #63a4d5;
+    width:300px;
+}
+.content .inputRole .inputTips.inputAgreeTips{
+    color: #b62c33;
+    width:300px;
+}
+.content .inputRole .inputTips.inputCarCenterTips{
+    color: #cccccc;
+}
+.content .inputRole  select{
+    position: absolute;
+    top: 0px;
+    left: 140px;
+    width: 400px;
+    height: 122px;
+}
+.selectDownBG{
+    width: 46px;
+    height: 23px;
+    background: url(../images/downBG.png) center center no-repeat;
+}
+.content .inputRole#inputName{
+    height:122px;
+    background-position: 0px -0px;
+}
+.content .inputRole#inputName #name{
+    width: 200px;
+    height: 60px;
+    line-height:60px;
+    position: absolute;
+    top: 31px;
+    left: 140px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 30px;
+}
+.content .inputRole#inputName .gender{
+    width: 80px;
+    height: 60px;
+    position: absolute;
+    top:31px;
+    cursor: pointer;
+    background-image: url(../images/checkBox.png);
+    background-repeat: no-repeat;
+    line-height: 60px;
+    text-indent: 32px;
+    font-size: 24px;
+    background-position: -272px center;
+    color: #b62c33;
+}
+.content .inputRole#inputName .gender.yes{
+    background-position: 0px center;
+    color: #63a4d5;
+}
+.content .inputRole#inputName .gender#man{
+    left: 360px;
+}
+.content .inputRole#inputName .gender#woman{
+    left:480px;
+}
+.content .inputRole#inputPhone{
+    height:122px;
+    background-position: 0px -122px;
+}
+.content .inputRole#inputPhone #phone{
+    width: 500px;
+    height: 60px;
+    line-height:60px;
+    position: absolute;
+    top: 31px;
+    left: 140px;
+    background: none;
+    border: none;
+    color: #fff;
+    font-size: 30px;
+}
+.content .inputRole#inputCarModel{
+    height:122px;
+    background-position: 0px 0px;
+}
+.content .inputRole#inputCarTime{
+    height:121px;
+    background-position: 0px -122px;
+}
+.content .inputRole#inputCarPrice{
+    height:122px;
+    background-position: 0px 0px;
+}
+.content .inputRole#inputAgree{
+    height:122px;
+    background-position: 0px -122px;
+}
+.content .inputRole#inputCarCenter{
+    height:121px;
+    background-position: 0px 0px;
+}
+.content .inputRole#inputReader{
+    height:122px;
+    background-position: 0px -122px;
+}
+.content .inputRole#inputAgree .YesOrNo{
+    width: 80px;
+    height: 60px;
+    position: absolute;
+    top:31px;
+    cursor: pointer;
+    background-image: url(../images/checkBox.png);
+    background-repeat: no-repeat;
+    line-height: 60px;
+    text-indent: 40px;
+    font-size: 24px;
+    background-position: -272px center;
+    color: #b62c33;
+}
+.content .inputRole#inputAgree .YesOrNo.yes{
+    background-position: 0px center;
+    color: #63a4d5;
+}
+.content .inputRole#inputAgree .YesOrNo#agree{
+    left: 360px;
+}
+.content .inputRole#inputAgree .YesOrNo#notAgree{
+    left:480px;
+}
+.content .inputRole#inputReader .agreeOrNot{
+    width: 200px;
+    height: 60px;
+    position: absolute;
+    top:31px;
+    cursor: pointer;
+    background-image: url(../images/checkBox.png);
+    background-repeat: no-repeat;
+    line-height: 60px;
+    text-indent: 40px;
+    font-size: 26px;
+    color: #dddddd;
+    left:160px;
+    background-position: -272px center;
+}
+.content .inputRole#inputReader .agreeOrNot.yes{
+    background-position: 0px center;
+}
+.content .inputRole#inputReader .showRules{
+    width: 170px;
+    height: 60px;
+    position: absolute;
+    top: 31px;
+    left: 340px;
+    line-height: 60px;
+    text-align: center;
+    text-decoration: underline;
+    cursor: pointer;
+    color: #63a4d5;
+    font-size: 26px;
+}
+.content .inputControll{
+    width: 640px;
+    cursor: pointer;
+    height: 93px;
+}
+.content .inputControll#inputSure{
+    background-color: #d52730;
+}
+.content .inputControll#inputSure.one {
+    background-image: url(../images/inputController.jpg);
+    background-repeat: no-repeat;
+    background-position: top center;
+}
+.content .inputControll#inputSure.two {
+    background-image: url(../images/inputController.jpg);
+    background-repeat: no-repeat;
+    background-position: bottom center;
+}
+.content .inputControll#inputBack{
+    background-image: url(../images/inputController.jpg);
+    background-repeat: no-repeat;
+    background-color: #2aa6d9;
+    background-position: center -93px;
+}
+.content .rules {
+    width: 640px;
+    height: 100%;
+    background: url(../images/ruleBG.jpg) top center repeat-y;
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    z-index: 100;
+    display: none;
+}
+.content .rules .closeRules{
+    background: url(../images/close.png) top right no-repeat;
+    width: 100px;
+    height: 100px;
+    position: absolute;
+    top: 20px;
+    right: 20px;
+    cursor: pointer;
+    z-index: 101;
+}
+.content .rules .clickToCloseRules{
+    width: 640px;
+    height: 92px;
+    line-height: 92px;
+    text-align: center;
+    font-size: 36px;
+    color: #fff;
+    cursor: pointer;
+    z-index: 102;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    background-color: #d52730;
+}
+/**loading***/
+.content .wrap{
+    width: 100%;
+    height: 100%;
+    text-align: center;
+    z-index: 1000;
+    background: rgba(255,255,255,0.93);
+    position: absolute;
+    top: 0px;
+    left: 0px;
+    display: none;
+}
+.content .wrap .loading{
+    position: absolute;
+    top: 50%;
+    margin-top: -32px;
+    left: 50%;
+    margin-left: -64px;
+}
